@@ -1,11 +1,49 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" ng-app="AppModule">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Angularjs SPA</title>
+    <!-- CSS FILES-->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
+    <!-- APPLICATION HEADER, MENU -->
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#/">Angular SPA</a>
+                </div>
 
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#books"><i class="fa fa-shield"></i> Books</a></li>
+                    <li><a href="#about"><i class="fa fa-comment"></i> About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- APPLICATION MAIN CONTENT -->
+    <div id="main">
+        <div ng-view></div>
+    </div>
+
+    <!-- APPLICATION FOOTER -->
+    <hr />
+    <footer class="text-center">
+        <p>Single Page Application with Angularjs and TypeScript</p>
+    </footer>
+
+    <!-- JS LIBS -->
+    <script src="./assets/libs/traceur-runtime.min.js"></script>
+    <script src="./assets/libs/system.js"></script>
+
+    <script src="./assets/libs/jquery.min.js"></script>
+    <script src="./assets/libs/bootstrap.min.js"></script>
+    <script src="./assets/libs/angular.min.js"></script>
+    <script src="./assets/libs/angular-route.min.js"></script>
+    <!-- JS FILES -->
+    
 </body>
 </html>
