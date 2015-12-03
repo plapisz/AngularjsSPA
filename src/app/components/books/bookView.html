@@ -1,0 +1,66 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <h4 class="text-center">List of books</h4>
+                <h4 ng-show="bookCtrl.showError" class="text-center">{{ bookCtrl.errorMessage }}</h4>
+                <div class="input-group">
+                    <span class="input-group-addon">Find: </span>
+                    <input type="text" class="form-control" placeholder="Enter a book" ng-model="bookCtrl.bookFilter" />
+                </div>
+                <br />
+                <table class="table table-responsive table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <td>Id</td>
+                            <td>Title</td>
+                            <td>Year</td>
+                            <td>Author</td>
+                            <td>Remove</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="book in bookCtrl.books | filter : bookCtrl.bookFilter">
+                            <td> {{ book.Id }}</td>
+                            <td> {{ book.Title }}</td>
+                            <td> {{ book.Year }}</td>
+                            <td> {{ book.Author.LastName }}</td>
+                            <td><button class="btn btn-danger btn-xs" ng-click="bookCtrl.removeBooks(book.Id)">&times;</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- add new book -->
+                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                    Add book
+                </button>
+
+                <!-- Modal window -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Title</label>
+                                    <input type="text" class="form-control" ng-model="bookCtrl.book.Title" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Year</label>
+                                    <input type="number" class="form-control" ng-model="bookCtrl.book.Year" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Author</label>
+                                    <input type="number" class="form-control" ng-model="bookCtrl.book.authorId" />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="bookCtrl.addBooks(bookCtrl.book)">Add book</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal window -->
+            </div>
+        </div>
+    </div>
+</div>
