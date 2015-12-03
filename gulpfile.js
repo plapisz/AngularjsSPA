@@ -12,6 +12,7 @@ gulp.task('copy_js_lib', function () {
 		'jspm_packages/system.js',
 		'bower_components/angular/angular.min.js',
         'bower_components/angular-route/angular-route.min.js',
+        'bower_components/angular-mocks/angular-mocks.js',
         'bower_components/bootstrap/dist/js/bootstrap.min.js',
         'bower_components/jquery/dist/jquery.min.js',
     ])
@@ -41,4 +42,4 @@ gulp.task('watch', function () {
     gulp.watch('src/**/*.ts', ['typescript-compile']);
 });
 
-gulp.task('default', ['typescript-compile', 'copy_js_lib','copy_css_files']);
+gulp.task('default', ['typescript-compile', 'copy_js_lib', 'copy_css_files']);
