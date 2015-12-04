@@ -11,7 +11,7 @@ var AppModule;
                 .when("/", {
                 controller: "AppModule.Controllers.HomeController",
                 templateUrl: "app/components/home/homeView.html",
-                controllerAs: "bookCtrl"
+                controllerAs: "homeCtrl"
             })
                 .when("/books", {
                 controller: "AppModule.Controllers.BookController",
