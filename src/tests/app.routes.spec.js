@@ -13,7 +13,7 @@
 
     describe("test home route", function () {
         it("should map to homeController", function () {
-            expect(route.routes["/"].controller).toBe("AppModule.controllers.homeController");
+            expect(route.routes["/"].controller).toBe("AppModule.Controllers.HomeController");
         });
         it("should map to homeView", function () {
             expect(route.routes["/"].templateUrl).toBe("app/components/home/homeView.html");
@@ -29,12 +29,12 @@
         });
     });
 
-    describe("test about route", function () {
-        it("should map to aboutController", function () {
-            expect(route.routes["/about"].controller).toEqual("AppModule.controllers.aboutController");
+    describe("test contact route", function () {
+        it("should map to contactController", function () {
+            expect(route.routes["/contact"].controller).toEqual("AppModule.Controllers.ContactController");
         });
-        it("should map to aboutView", function () {
-            expect(route.routes["/about"].templateUrl).toEqual("app/components/about/aboutView.html");
+        it("should map to contactView", function () {
+            expect(route.routes["/contact"].templateUrl).toEqual("app/components/contact/contactView.html");
         });
     });
 

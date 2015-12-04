@@ -9,7 +9,7 @@ var AppModule;
         Routes.configureRoutes = function ($routeProvider) {
             $routeProvider
                 .when("/", {
-                controller: "AppModule.controllers.homeController",
+                controller: "AppModule.Controllers.HomeController",
                 templateUrl: "app/components/home/homeView.html",
                 controllerAs: "bookCtrl"
             })
@@ -18,10 +18,10 @@ var AppModule;
                 templateUrl: "app/components/books/bookView.html",
                 controllerAs: "bookCtrl"
             })
-                .when("/about", {
-                controller: "AppModule.controllers.aboutController",
-                templateUrl: "app/components/about/aboutView.html",
-                controllerAs: "aboutCtrl"
+                .when("/contact", {
+                controller: "AppModule.Controllers.ContactController",
+                templateUrl: "app/components/contact/contactView.html",
+                controllerAs: "contactCtrl"
             })
                 .otherwise({ redirectTo: "/" });
         };
