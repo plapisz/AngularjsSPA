@@ -18,12 +18,14 @@ git clone https://github.com/plapisz/AngularjsSPA.git
 npm install -g gulp
 npm install -g jspm
 npm install -g bower
+npm install -g tsd
 ~~~
 - Install being in the project folder:
 ~~~
 npm install
 jspm install
 bower install
+tsd install
 ~~~
  
 ### Run
