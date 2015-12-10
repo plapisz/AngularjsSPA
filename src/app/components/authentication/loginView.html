@@ -1,0 +1,17 @@
+﻿<div class="container">
+    <form class="form-login" role="form">
+        <h3 class="form-login-heading text-center">Login</h3>
+        <div class="form-group">
+            <label for="Username">Login</label>
+            <input type="text" class="form-control" placeholder="Username" ng-model="loginCtrl.loginUser.userName" required autofocus>
+        </div>
+        <div class="form-group">
+            <label for="Username">Password</label>
+            <input type="password" class="form-control" placeholder="Password" ng-model="loginCtrl.loginUser.password" required>
+        </div>
+        <button class="btn btn-info btn-block" type="submit" ng-click="loginCtrl.login()">Login</button>
+        <div ng-show="loginCtrl.showErrorMessage" class="alert alert-danger">
+            {{ loginCtrl.errorMessage }}
+        </div>
+    </form>
+</div>

@@ -1,0 +1,21 @@
+﻿<div class="container">
+    <form class="form-login" role="form">
+        <h3 class="form-login-heading text-center">Register</h3>
+        <div class="form-group">
+            <label for="Username">Username</label>
+            <input id="Username" type="text" class="form-control" placeholder="Username" data-ng-model="registerCtrl.registerUser.userName" required autofocus>
+        </div>
+        <div class="form-group">
+            <label for="Password">Password</label>
+            <input id="Password" type="password" class="form-control" placeholder="Password" data-ng-model="registerCtrl.registerUser.password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input id="confirmPassword" type="password" class="form-control" placeholder="Confirm Password" data-ng-model="registerCtrl.registerUser.confirmPassword" required>
+        </div>
+        <button class="btn btn-lg btn-info btn-block" type="submit" data-ng-click="registerCtrl.register()">Register</button>
+        <div ng-show="registerCtrl.showMessage" ng-class="(registerCtrl.savedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
+            {{ registerCtrl.message }}
+        </div>
+    </form>
+</div>

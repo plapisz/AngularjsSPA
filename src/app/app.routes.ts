@@ -24,6 +24,16 @@ module AppModule {
                     templateUrl: "app/components/contact/contactView.html",
                     controllerAs: "contactCtrl"
                 })
+                .when("/login", {
+                    controller: "AppModule.Controllers.LoginController",
+                    templateUrl: "app/components/authentication/loginView.html",
+                    controllerAs: "loginCtrl"
+                })
+                .when("/register", {
+                    controller: "AppModule.Controllers.RegisterController",
+                    templateUrl: "app/components/authentication/registerView.html",
+                    controllerAs: "registerCtrl"
+                })
                 .otherwise({ redirectTo: "/" });
         }
     }

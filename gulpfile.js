@@ -15,6 +15,7 @@ gulp.task('copy_js_lib', function () {
         'bower_components/angular-mocks/angular-mocks.js',
         'bower_components/bootstrap/dist/js/bootstrap.min.js',
         'bower_components/jquery/dist/jquery.min.js',
+        'bower_components/angular-local-storage/dist/angular-local-storage.min.js',
     ])
 	.pipe(gulp.dest('src/assets/libs/'));
 });
