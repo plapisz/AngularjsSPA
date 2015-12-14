@@ -35,6 +35,7 @@ module.exports = function (config) {
             // spec files
             './src/tests/app.routes.spec.js',
             './src/tests/authenticationService.spec.js',
+            './src/tests/loginController.spec.js',
             './src/tests/bookService.spec.js',
             './src/tests/bookController.spec.js',
             './src/tests/contactService.spec.js',
