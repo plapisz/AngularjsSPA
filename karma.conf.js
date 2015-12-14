@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Thu Dec 03 2015 13:33:29 GMT+0100 (Central European Standard Time)
 
-module.exports = function(config) {
+module.exports = function (config) {
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -18,16 +18,23 @@ module.exports = function(config) {
             // libs
             './src/assets/libs/angular.min.js',
             './src/assets/libs/angular-route.min.js',
+            './src/assets/libs/angular-local-storage.min.js',
             './src/assets/libs/angular-mocks.js',
             // source files
             './src/app/app.routes.js',
             './src/app/app.module.js',
+            './src/app/components/authentication/authenticationInterceptorService.js',
+            './src/app/components/authentication/authenticationModel.js',
+            './src/app/components/authentication/authenticationService.js',
+            './src/app/components/authentication/loginController.js',
+            './src/app/components/authentication/registerController.js',
             './src/app/components/books/bookService.js',
             './src/app/components/books/bookController.js',
             './src/app/components/contact/contactService.js',
             './src/app/components/contact/contactController.js',
             // spec files
             './src/tests/app.routes.spec.js',
+            './src/tests/authenticationService.spec.js',
             './src/tests/bookService.spec.js',
             './src/tests/bookController.spec.js',
             './src/tests/contactService.spec.js',
